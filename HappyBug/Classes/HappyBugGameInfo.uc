@@ -2,6 +2,7 @@ class HappyBugGameInfo extends GameInfo;
 
 DefaultProperties
 {
+    PlayerControllerClass=class'HappyBugPlayerController'
 }
 
 function NavigationPoint FindPlayerStart(Controller Player, optional byte InTeam, optional string IncomingName)

@@ -1,3 +1,4 @@
 *.*
 !.gitignore
 !HappyBug/**
+!Engine/Classes/RUSeqEvent_CinematicActivated.uc
