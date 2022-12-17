@@ -35,3 +35,16 @@ exec function HBCinematic(string CinematicName)
         }
     }
 }
+
+exec function HBGhost()
+{
+    bCollideWorld = !bCollideWorld;
+    if (bCollideWorld)
+    {
+        ClientMessage("World collision enabled.");
+    }
+    else
+    {
+        ClientMessage("World collision disabled.");
+    }
+}
