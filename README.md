@@ -38,7 +38,7 @@ The experimental `HBCinematic` command can trigger some in-game rendered cutscen
 
 ## Development
 
-The repo should be checked out into the `Development/Src` directory of the 2011-08 version of the UDK. First, navigate to the right right directory, then do:
+The repo should be checked out into the `Development/Src` directory of the 2011-08 version of the UDK. First, navigate to the right directory, then do:
 
 ```
 git init
@@ -46,6 +46,30 @@ git remote add origin https://github.com/DRKV333/HappyBug.git
 git pull origin master
 git branch --set-upstream-to=origin/master master
 ```
+
+Open `UDKGame/Config/DefaultEngine.ini` and at the end of the `[UnrealEd.EditorEngine]` section, add these lines:
+
+```
++EditPackages=HappyBug
+```
+
+(This list might expand in the future.)
+
+In `UDKGame/Config/DefaultGame.ini` replace these line:
+
+```
+DefaultGame=UDKBase.SimpleGame
+DefaultServerGame=UDKBase.SimpleGame
+```
+
+With these:
+
+```
+DefaultGame=HappyBug.HappyBugGameInfo
+DefaultServerGame=HappyBug.HappyBugGameInfo
+```
+
+(This is technically not required, but it let's you debug the mod in UnrealEd.)
 
 To compile open `Binaries/UnrealFrontend.exe`, click on `Script` at the top and select `Compile scripts`.
 
