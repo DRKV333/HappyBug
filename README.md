@@ -69,7 +69,7 @@ DefaultGame=HappyBug.HappyBugGameInfo
 DefaultServerGame=HappyBug.HappyBugGameInfo
 ```
 
-(This is technically not required, but it let's you debug the mod in UnrealEd.)
+(This is technically not required, but it lets you debug the mod in UnrealEd.)
 
 To compile open `Binaries/UnrealFrontend.exe`, click on `Script` at the top and select `Compile scripts`.
 
