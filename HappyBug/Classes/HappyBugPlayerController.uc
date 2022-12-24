@@ -36,6 +36,41 @@ exec function HBCinematic(string CinematicName)
     }
 }
 
+exec function HBUnhideAll()
+{
+    local Actor AnActor;
+
+    foreach AllActors(class'Actor', AnActor)
+    {
+        AnActor.SetHidden(false);
+    } 
+}
+
+exec function HBMatinee(optional int Index = -1)
+{
+    local Sequence GameSeq;
+    local array<SequenceObject> InterpObjects;
+    local SeqAct_Interp Interp;
+
+    GameSeq = WorldInfo.GetGameSequence();
+    if (GameSeq != none)
+    {
+        GameSeq.FindSeqObjectsByClass(class'SeqAct_Interp', true, InterpObjects);
+        
+        if (Index >= 0 && Index < InterpObjects.Length)
+        {
+            ClientMessage("Activated!");
+            Interp = SeqAct_Interp(InterpObjects[Index]);
+            Interp.Reset();
+            Interp.ForceActivateInput(0);
+        }
+        else
+        {
+            ClientMessage("Number of Matinees:"@InterpObjects.Length);
+        }
+    }
+}
+
 exec function HBGhost()
 {
     bCollideWorld = !bCollideWorld;
