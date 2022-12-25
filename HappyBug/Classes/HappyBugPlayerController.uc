@@ -75,13 +75,9 @@ exec function HBGhost()
 {
     bCollideWorld = !bCollideWorld;
     if (bCollideWorld)
-    {
         ClientMessage("World collision enabled.");
-    }
     else
-    {
         ClientMessage("World collision disabled.");
-    }
 }
 
 exec function HBSpeed(float NewSpeed = -1)
@@ -89,13 +85,9 @@ exec function HBSpeed(float NewSpeed = -1)
     if (NewSpeed == -1)
     {
         if (SpectatorCameraSpeed < 1000)
-        {
             SpectatorCameraSpeed = 5000;
-        }
         else
-        {
             SpectatorCameraSpeed = 600;
-        }
     }
     else
     {
