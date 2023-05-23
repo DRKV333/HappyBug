@@ -46,7 +46,7 @@ exec function HBUnhideAll()
     } 
 }
 
-exec function HBMatinee(optional int Index = -1)
+exec function HBMatinee(optional int Index = -1, bool ResetOnly = false)
 {
     local Sequence GameSeq;
     local array<SequenceObject> InterpObjects;
@@ -62,7 +62,8 @@ exec function HBMatinee(optional int Index = -1)
             ClientMessage("Activated!");
             Interp = SeqAct_Interp(InterpObjects[Index]);
             Interp.Reset();
-            Interp.ForceActivateInput(0);
+            if (!ResetOnly)
+                Interp.ForceActivateInput(0);
         }
         else
         {
