@@ -34,8 +34,11 @@ Use the `HBGhost` command to toggle world collisions.
 
 Use `HBSpeed` to toggle high speed mode, or use it to set a specific speed (e.g. `HBSpeed 1000`).
 
-The experimental `HBCinematic` command can trigger some in-game rendered cutscenes. Call it with the name of a cinematic to play that one. Using an invalid name will list out the available cinematics in the level.
+The `HBCinematic` command can trigger some in-game rendered cutscenes. Call it with the name of a cinematic to play that one. Using an invalid name will list out the available cinematics in the level.
 
+The `HBMatinee` command is a bit more aggressive and can play most cutscenes, though some have issues with hidden objects. Call it without an argument to list the number of matinees in the level. Call it with an index to start a matinee (starting with 0). Use `HBMatinee <number> true` to reset a matinee without playing it.
+
+The `HBUnhideAll` command makes every hidden actor visible.
 ## Development
 
 The repo should be checked out into the `Development/Src` directory of the 2011-08 version of the UDK. First, navigate to the right directory, then do:
