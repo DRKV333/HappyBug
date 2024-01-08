@@ -53,6 +53,7 @@ git branch --set-upstream-to=origin/master master
 Open `UDKGame/Config/DefaultEngine.ini` and at the end of the `[UnrealEd.EditorEngine]` section, add these lines:
 
 ```
++EditPackages=Otherland
 +EditPackages=HappyBug
 ```
 
