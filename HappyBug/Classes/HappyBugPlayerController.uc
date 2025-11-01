@@ -98,7 +98,7 @@ exec function HBSpeed(float NewSpeed = -1)
     ClientMessage("Set camera speed to"@SpectatorCameraSpeed);
 }
 
-exec function DumpFlightTubes()
+exec function HBDumpFlightTubes()
 {
     local JsonObject Json;
     local JsonObject TubeJson;
